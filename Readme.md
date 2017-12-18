@@ -6,6 +6,7 @@ Features:
 - Swagger documentation
 - H2 file database
 - JPA with transactions
+- Cache
 
 ## Actuators links
 Example: http://localhost:<management.port>/metrics

@@ -1,5 +1,7 @@
 package com.dgdev.luca.demojpa.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -32,7 +34,11 @@ public class DemoJpaController {
 	@GetMapping("/get/{id}")
 	User getUser(@PathVariable long id) {
 		System.out.println("DemoJpaController#getUser");
-		return userRepository.findOne(id);
+		
+		List<User> userList = userRepository.find(id);
+		return userList.get(0);
+		
+//		return userRepository.findOne(id);
 	}
 
 	@ApiOperation(value = "Crete a new User") // <- SWAGGER DOCS
