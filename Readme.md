@@ -7,6 +7,7 @@ Features:
 - H2 file database
 - JPA with transactions
 - Cache
+- Custom exception handler with @ControllerAdvice
 
 ## Actuators links
 Example: http://localhost:<management.port>/metrics

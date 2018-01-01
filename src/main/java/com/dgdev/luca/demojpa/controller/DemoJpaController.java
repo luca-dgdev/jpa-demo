@@ -35,6 +35,9 @@ public class DemoJpaController {
 	User getUser(@PathVariable long id) {
 		System.out.println("DemoJpaController#getUser");
 		
+		String s = null;
+		s.toString();
+		
 		List<User> userList = userRepository.find(id);
 		return userList.get(0);
 		
